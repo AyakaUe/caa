@@ -1,0 +1,22 @@
+{
+  "records": [
+    {
+      "company_cd": "",
+      "id_no": "",
+      "card_no": "",
+      "lend_ng_flg": "",
+      "disposal_flg": "",
+      "memo": "",
+      "add_date": null,
+      "add_user": "",
+      "upd_date": null,
+      "upd_user": "",
+      "delete_flg": "",
+      "is_lend_ng": false,
+      "is_disposal": false
+    }
+  ],
+  "count": 0,
+  "error": false,
+  "message": ""
+}

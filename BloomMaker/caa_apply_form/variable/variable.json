@@ -1,0 +1,94 @@
+{
+  "data": {
+    "contents": {
+      "user_info_name": null,
+      "user_info_dept": null,
+      "device_info": null,
+      "note": null,
+      "attached_files": [],
+      "notifier_list": [
+        {
+          "user_no": null,
+          "user_name": null,
+          "user_dept_name": null,
+          "user_comp_short": null,
+          "user_mail": null,
+          "pcExist": 0,
+          "idExist": 0
+        }
+      ],
+      "mail_group": "form",
+      "mail_cd": "bne01",
+      "category": null,
+      "target": null,
+      "target_cd": null
+    }
+  },
+  "request_param": {
+    "limit_check": true,
+    "dept_cd": "",
+    "comp_cd": ""
+  },
+  "eventGroupKey": {
+    "id": "abcdefg"
+  },
+  "lists": {
+    "temp_list": {
+      "user_no": null,
+      "user_name": null,
+      "user_dept_name": null,
+      "user_comp_short": null,
+      "user_mail": null
+    },
+    "user_list": [
+      {
+        "user_no": null,
+        "user_name": null,
+        "user_dept_name": null,
+        "user_comp_short": null,
+        "user_mail": null
+      }
+    ],
+    "pulldown_cotegorys": {
+      "records": [
+        null
+      ]
+    },
+    "pulldown_targets": {
+      "records": [
+        null
+      ]
+    }
+  },
+  "user_dept_labels": [],
+  "user_dept_values": [],
+  "selected_user_dept": null,
+  "Status-LD_sdp_mail_send": null,
+  "user_dept_cd": null,
+  "user_company_cd": null,
+  "pulldown_categolys": [],
+  "pulldown_targets": [],
+  "param_pulldown": {
+    "selected_category": null,
+    "selected_target": null
+  },
+  "pulldown_targets_cd": [],
+  "device_info_required": null,
+  "date": null,
+  "officeList": {
+    "records": [
+      {
+        "text": "未来研究所,サウスタワー",
+        "value": "",
+        "status": false
+      }
+    ]
+  },
+  "pageNo": 0,
+  "applyButtonDisp": false,
+  "nextButtonDisp": true,
+  "topMenuUrl": "/imart/caa_mock/caa_mock_menu_01",
+  "ringiNo": "",
+  "saveFlg": false,
+  "applyFlg": false
+}
