@@ -1,0 +1,28 @@
+{
+  "MESSAGES": {
+    "DATA_EXISTS": "既に登録されています",
+    "RESIST_FAILED": "登録処理が異常終了しました",
+    "INSERT_SUCCESS": "登録しました",
+    "UPDATE_SUCCESS": "更新しました",
+    "EXIT_EDIT": "編集中の内容は破棄されます。よろしいですか？"
+  },
+  "tableHeader": {
+    "edit": "編集",
+    "id_no": "ID番号",
+    "card_no": "カードNo.",
+    "lend_ng_flg": "貸出対象外",
+    "disposal_flg": "廃棄",
+    "memo": "備考",
+    "lender_account_number": "貸出者：アカウント番号",
+    "lender_name_of_the_contractor": "貸出者：業務委託者名"
+  },
+  "columnSettings": {
+    "edit": {
+      "type": "button-action",
+      "label": "編集",
+      "disabled": false,
+      "hiddenColumn": false
+    }
+  },
+  "topMenuUrl": "/imart/caa_mock/caa_mock_menu_01"
+}

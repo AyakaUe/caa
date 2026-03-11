@@ -1,0 +1,77 @@
+{
+  "clickedCell": {
+    "key": "",
+    "index": 0
+  },
+  "isSearched": false,
+  "defaultSearchParam": {
+    "company_cd": "",
+    "id_no": "",
+    "card_no": "",
+    "is_lend_ng": false,
+    "is_disposal": false
+  },
+  "searchParam": {
+    "company_cd": "",
+    "id_no": "",
+    "card_no": "",
+    "is_lend_ng": false,
+    "is_disposal": false
+  },
+  "searchResult": {
+    "records": [
+      {
+        "company_cd": "",
+        "id_no": "",
+        "card_no": "",
+        "lend_ng_flg": "",
+        "disposal_flg": "",
+        "memo": "",
+        "add_date": null,
+        "add_user": "",
+        "upd_date": null,
+        "upd_user": "",
+        "delete_flg": "",
+        "is_lend_ng": false,
+        "is_disposal": false
+      }
+    ],
+    "count": 0,
+    "error": false,
+    "message": ""
+  },
+  "defaultUpdateParam": {
+    "displayMode": "",
+    "company_cd": "",
+    "id_no": "",
+    "card_no": "",
+    "is_lend_ng": false,
+    "is_disposal": false,
+    "memo": "",
+    "add_date": null,
+    "add_user": "",
+    "upd_date": null,
+    "upd_user": "",
+    "delete_flg": "0"
+  },
+  "updateParam": {
+    "displayMode": "0",
+    "company_cd": "",
+    "id_no": "",
+    "card_no": "",
+    "is_lend_ng": false,
+    "is_disposal": false,
+    "memo": "",
+    "add_date": null,
+    "add_user": "",
+    "upd_date": null,
+    "upd_user": "",
+    "delete_flg": ""
+  },
+  "updateResult": {
+    "error": false,
+    "errorMessage": ""
+  },
+  "menu": "/imart/caa/caa_menu",
+  "exit_edit": false
+}
