@@ -1,0 +1,2 @@
+var max_row_no = $variable.optionalParameter.userParameter.caa_t_contractor_provided_item.length > 0 ? Math.max(...$variable.optionalParameter.userParameter.caa_t_contractor_provided_item.map(item => item.row_no)) : 0;
+$variable.max_item_row_no = max_row_no + 1;

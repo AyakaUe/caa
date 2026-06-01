@@ -1,0 +1,209 @@
+{
+  "company_cd": "",
+  "caa_t_apply_info": {
+    "user_data_id": "",
+    "matter_no": "",
+    "request_kbn_cd": "",
+    "receive_user_cd": "",
+    "receive_employee_no": "",
+    "receive_user_name": "",
+    "receive_post_cd": "",
+    "receive_post_name": "",
+    "receive_dept_cd": "",
+    "receive_dept_name": "",
+    "receive_company_cd": "",
+    "receive_company_name": "",
+    "receive_company_short": "",
+    "contract_company_cd": "",
+    "contract_company_name": "",
+    "contract_manage_user_name": "",
+    "contract_work_content": "",
+    "contract_start_date": {},
+    "contract_end_plan_date": {},
+    "receive_start_date": {},
+    "receive_plan_end_date": {},
+    "receive_end_date": {},
+    "attend_count": "",
+    "work_location": "",
+    "apply_count": 0,
+    "doc_management_no": "",
+    "memo": "",
+    "receive_mod_flg": "",
+    "contract_manage_user_name_mod_flg": "",
+    "contract_work_content_mod_flg": "",
+    "contract_end_plan_date_mod_flg": "",
+    "receive_plan_end_date_mod_flg": "",
+    "attend_count_mod_flg": "",
+    "work_location_mod_flg": "",
+    "doc_management_no_mod_flg": "",
+    "add_date": {},
+    "add_user": "",
+    "upd_date": {},
+    "upd_user": "",
+    "delete_flg": ""
+  },
+  "caa_t_contractor_provided_item": [
+    {
+      "user_data_id": "",
+      "row_no": 0,
+      "manage_id": "",
+      "version": 0,
+      "manage_no": "",
+      "request_kbn_cd": "",
+      "account_no": "",
+      "contract_user_name": "",
+      "contract_user_kana": "",
+      "provided_account_flg": "",
+      "provided_pc_flg": "",
+      "provided_pc_memo": "",
+      "provided_id_card_flg": "",
+      "provided_id_card_memo": "",
+      "provided_dev_equipment_flg": "",
+      "provided_mobile_flg": "",
+      "provided_folder_access_flg": "",
+      "add_date": {},
+      "add_user": "",
+      "upd_date": {},
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
+  "wf10_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "wf30_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "wf40_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "wf50_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "wf60_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "soumu_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "inv_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "jouhou_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "jcntr_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "idcard_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "audit_public_group": [
+    {
+      "cd": "",
+      "name": ""
+    }
+  ],
+  "attend_count": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "work_location": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "account_exist": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "pc_exist": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "idcard_exist": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "dev_equipment_exist": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "mobile_exist": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ],
+  "folder_access_exist": [
+    {
+      "item_cd": "",
+      "item_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": ""
+    }
+  ]
+}

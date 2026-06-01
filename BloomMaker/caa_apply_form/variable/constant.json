@@ -2,10 +2,52 @@
   "message": {
     "error_00": "問題が発生しました。情報システム部にお問い合わせください。",
     "alart_00": "問合せを送信しました",
+    "alart_01": "選択した台帳データが更新されています。台帳データの確認をお願いします。",
     "error_01": "「空欄」は選択できません",
     "error_02": "「対象機材番号」は必須項目です",
     "error_03": "対象の稟議申請が見つかりませんでした。",
     "success_01": "保存しました",
-    "success_02": "申請しました。"
+    "success_02": "申請しました。",
+    "success_03": "処理が成功しました。",
+    "success_04": "再申請しました。"
+  },
+  "messageType": {
+    "loading": "loading",
+    "tempSave": "tempSave",
+    "apply": "apply",
+    "approve": "approve",
+    "reapply": "reapply",
+    "error": "error"
+  },
+  "header": {
+    "new": "業務委託者受入新規受入申請",
+    "update": "業務委託者受入変更申請",
+    "delete": "業務委託者受入終了申請"
+  },
+  "subject_matter": "【業務委託者受入申請】",
+  "ringiUrl": "https://irg01.bandainamco.co.jp/imart/approval/front/bwfDPc012/init",
+  "myAppryUrl": "/imart/caa/caa_my_wf_list",
+  "topMenuUrl": "/imart/caa/caa_menu",
+  "imwPageType": {
+    "pageTyp_App": "0",
+    "pageTyp_TempSave": "1",
+    "pageTyp_UnApp": "2",
+    "pageTyp_ReApp": "3",
+    "pageTyp_Proc": "4",
+    "pageTyp_Cnfm": "5",
+    "pageTyp_Procdetail": "6",
+    "pageTyp_Refdetail": "7",
+    "pageTyp_Cnfmdetail": "8",
+    "pageTyp_ArcMatdetail": "9"
+  },
+  "request_kbn_cd": {
+    "new": "01",
+    "update": "02",
+    "delete": "03"
+  },
+  "requiredLabel": {
+    "required_asterisk": "required-asterisk",
+    "required": "required",
+    "optional": "optional"
   }
 }

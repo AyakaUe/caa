@@ -1,0 +1,27 @@
+{
+  "request": {
+    "company_cd": "",
+    "imwUserCode": "",
+    "imwPageType": "",
+    "imwUserDataId": "",
+    "imwSystemMatterId": "",
+    "imwNodeId": "",
+    "imwArriveType": "",
+    "imwAuthUserCode": [
+      ""
+    ],
+    "imwApplyBaseDate": "",
+    "imwContentsId": "",
+    "imwContentsVersionId": "",
+    "imwRouteId": "",
+    "imwRouteVersionId": "",
+    "imwFlowId": "",
+    "imwFlowVersionId": "",
+    "imwSerialProcParams": "",
+    "imwCallOriginalParams": "",
+    "imwCallOriginalPagePath": "",
+    "imwSysDateTargetExpandFlag": "",
+    "imwShortCutFlag": "",
+    "imwOriginalUserDataId": ""
+  }
+}

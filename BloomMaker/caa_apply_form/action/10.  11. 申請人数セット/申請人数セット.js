@@ -1,0 +1,1 @@
+$variable.optionalParameter.userParameter.caa_t_apply_info.apply_count = $variable.optionalParameter.userParameter.caa_t_contractor_provided_item.length

@@ -1,0 +1,1 @@
+$variable.optionalParameter.userParameter.caa_t_apply_info.work_location = $variable.work_location_cheked.filter(i => i.isChecked).map(i => i.item_cd).join(",");
