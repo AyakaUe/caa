@@ -368,6 +368,57 @@
             "delete_flg": ""
         }
     ],
+      "id_card_message": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
+  "attend_count_message": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
+  "apply_complete_message": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
     "caa_t_request_common": {
         "user_data_id": "",
         "system_matter_id": "",

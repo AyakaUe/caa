@@ -35,9 +35,9 @@
     "attend_count_mod_flg": "",
     "work_location_mod_flg": "",
     "doc_management_no_mod_flg": "",
-    "add_date": {},
+    "add_date": null,
     "add_user": "",
-    "upd_date": {},
+    "upd_date": null,
     "upd_user": "",
     "delete_flg": "",
     "cntr_dept_cd": ""
@@ -341,6 +341,57 @@
       "delete_flg": ""
     }
   ],
+  "id_card_message": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
+  "attend_count_message": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
+  "apply_complete_message": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ],
   "caa_t_request_common": {
     "user_data_id": "",
     "system_matter_id": "",
@@ -354,7 +405,7 @@
     "drafter_department_cd": "",
     "drafter_post_cd": "",
     "draft_date": null,
-    "approval_date": {},
+    "approval_date": null,
     "add_date": null,
     "add_user": "",
     "upd_date": null,
