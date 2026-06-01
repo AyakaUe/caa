@@ -13,7 +13,9 @@
       "upd_user": "",
       "delete_flg": "",
       "is_lend_ng": false,
-      "is_disposal": false
+      "is_disposal": false,
+      "account_no": "",
+      "contract_user_name": ""
     }
   ],
   "count": 0,

@@ -34,7 +34,7 @@ function run(input) {
             nodeType: node.nodeType,
             parentNodeId: node.parentNodeId,
             parentNodeType: node.parentNodeType,
-            processTargetCd: processTargetModels.parameter
+            processTargetCd: processTargetModels[0].parameter
         }
 
     } catch (e) {
