@@ -4,7 +4,8 @@
     "RESIST_FAILED": "登録処理が異常終了しました",
     "INSERT_SUCCESS": "登録しました",
     "UPDATE_SUCCESS": "更新しました",
-    "EXIT_EDIT": "編集中の内容は破棄されます。よろしいですか？"
+    "EXIT_EDIT": "編集中の内容は破棄されます。よろしいですか？",
+    "error_00": "問題が発生しました。情報システム部にお問い合わせください。"
   },
   "tableHeader": {
     "edit": "編集",
@@ -13,8 +14,8 @@
     "lend_ng_flg": "貸出対象外",
     "disposal_flg": "廃棄",
     "memo": "備考",
-    "lender_account_number": "貸出者：アカウント番号",
-    "lender_name_of_the_contractor": "貸出者：業務委託者名"
+    "account_no": "貸出者：アカウント番号",
+    "contract_user_name": "貸出者：業務委託者名"
   },
   "columnSettings": {
     "edit": {
@@ -24,5 +25,6 @@
       "hiddenColumn": false
     }
   },
+  "DOUNROAD_URL": "/imart/logic/api/caa/caa_download_excel_flow",
   "topMenuUrl": "/imart/caa_mock/caa_mock_menu_01"
 }

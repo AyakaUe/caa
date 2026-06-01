@@ -1,3 +1,19 @@
 {
-  "company_cd": null
+  "company_cd": null,
+  "comp_ath_list": [
+    {
+      "company_cd": "",
+      "company_name": "",
+      "company_short_name": "",
+      "employee_no": "",
+      "department_cd": "",
+      "department_name": "",
+      "post_cd": "",
+      "post_name": "",
+      "rank": "",
+      "user_cd": "",
+      "user_name": "",
+      "email_address": ""
+    }
+  ]
 }

@@ -18,6 +18,25 @@
     "is_lend_ng": false,
     "is_disposal": false
   },
+  "role_search": {
+    "company_cd": "",
+    "public_group_category": "idcard",
+    "user_cd": ""
+  },
+  "page_result": {
+    "can_open": true,
+    "error": false,
+    "error_message": ""
+  },
+  "public_groups": {
+    "records": [
+      {
+        "company_cd": null,
+        "public_group_category": null,
+        "public_group_name": ""
+      }
+    ]
+  },
   "searchResult": {
     "records": [
       {
@@ -33,7 +52,9 @@
         "upd_user": "",
         "delete_flg": "",
         "is_lend_ng": false,
-        "is_disposal": false
+        "is_disposal": false,
+        "account_no": "",
+        "contract_user_name": ""
       }
     ],
     "count": 0,
@@ -71,6 +92,9 @@
   "updateResult": {
     "error": false,
     "errorMessage": ""
+  },
+  "output": {
+    "path": ""
   },
   "menu": "/imart/caa/caa_menu",
   "exit_edit": false
