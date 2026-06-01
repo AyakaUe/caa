@@ -1,0 +1,21 @@
+{
+  "query": "",
+  "count": 0,
+  "records": [
+    {
+      "company_cd": "",
+      "item_category": "",
+      "item_content": "",
+      "required_flg": "",
+      "is_required": false,
+      "disable_flg": "",
+      "is_disable": false,
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ]
+}

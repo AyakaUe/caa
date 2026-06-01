@@ -1,0 +1,19 @@
+{
+  "query": "",
+  "count": 0,
+  "records": [
+    {
+      "user_name": "",
+      "user_cd": "",
+      "employee_no": "",
+      "company_name": "",
+      "company_short": "",
+      "dept_name": "",
+      "post_name": "",
+      "mail_address": "",
+      "company_cd": "",
+      "dept_cd": "",
+      "post_cd": ""
+    }
+  ]
+}

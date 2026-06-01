@@ -1,0 +1,41 @@
+UPDATE PUBLIC.caa_t_apply_info 
+SET
+    matter_no = /*matter_no*/                                                   -- 案件番号
+    , request_kbn_cd = /*request_kbn_cd*/                                       -- 申請区分コード
+    , cntr_dept_cd = /*cntr_dept_cd*/
+    , receive_user_cd = /*receive_user_cd*/                                     -- 受入担当者：ユーザコード
+    , receive_employee_no = /*receive_employee_no*/                             -- 受入担当者：社員番号
+    , receive_user_name = /*receive_user_name*/                                 -- 受入担当者：氏名
+    , receive_post_cd = /*receive_post_cd*/                                     -- 受入担当者：役職コード
+    , receive_post_name = /*receive_post_name*/                                 -- 受入担当者：役職名
+    , receive_dept_cd = /*receive_dept_cd*/                                     -- 受入部署コード
+    , receive_dept_name = /*receive_dept_name*/                                 -- 受入部署名
+    , receive_company_cd = /*receive_company_cd*/                               -- 受入会社コード
+    , receive_company_name = /*receive_company_name*/                           -- 受入会社名
+    , receive_company_short = /*receive_company_short*/                         -- 受入会社略称
+    , contract_company_cd = /*contract_company_cd*/                             -- 委託先会社コード
+    , contract_company_name = /*contract_company_name*/                         -- 委託先会社名
+    , contract_manage_user_name = /*contract_manage_user_name*/                 -- 委託先管理責任者：氏名
+    , contract_work_content = /*contract_work_content*/                         -- 業務内容
+    , contract_start_date = /*contract_start_date*/                             -- 業務委託契約開始日
+    , contract_end_plan_date = /*contract_end_plan_date*/                       -- 業務委託契約終了予定日
+    , receive_start_date = /*receive_start_date*/                               -- 受入開始日
+    , receive_plan_end_date = /*receive_plan_end_date*/                         -- 受入終了予定日
+    , receive_end_date = /*receive_end_date*/                                   -- 受入終了日
+    , attend_count = /*attend_count*/                                           -- 出社回数
+    , work_location = /*work_location*/                                         -- 勤務地
+    , apply_count = /*apply_count*/                                             -- 申請人数
+    , doc_management_no = /*doc_management_no*/                                 -- 稟議番号（文書番号）
+    , memo = /*memo*/                                                           -- 備考
+    , receive_mod_flg = /*receive_mod_flg*/                                     -- 受入担当者：修正フラグ
+    , contract_manage_user_name_mod_flg = /*contract_manage_user_name_mod_flg*/ -- 委託先管理責任者：修正フラグ
+    , contract_work_content_mod_flg = /*contract_work_content_mod_flg*/         -- 業務内容：修正フラグ
+    , contract_end_plan_date_mod_flg = /*contract_end_plan_date_mod_flg*/       -- 業務委託契約終了予定日：修正フラグ
+    , receive_plan_end_date_mod_flg = /*receive_plan_end_date_mod_flg*/         -- 受入終了予定日：修正フラグ
+    , attend_count_mod_flg = /*attend_count_mod_flg*/                           -- 出社回数：修正フラグ
+    , work_location_mod_flg = /*work_location_mod_flg*/                         -- 勤務地：修正フラグ
+    , doc_management_no_mod_flg = /*doc_management_no_mod_flg*/                 -- 稟議番号（文書番号）：修正フラグ
+    , upd_date = now()                                                          -- 更新日時
+    , upd_user = /*upd_user*/                                                   -- 更新者
+WHERE
+    user_data_id = /*user_data_id*/                                             -- ユーザデータID

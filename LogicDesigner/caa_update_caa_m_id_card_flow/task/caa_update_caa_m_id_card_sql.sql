@@ -1,17 +1,17 @@
 UPDATE PUBLIC.caa_m_id_card 
 SET
     card_no = /*card_no*/                          -- カードNo.
-    /*IF is_lend_ng == true*/
+    /*IF is_lend_ng == true */
     , lend_ng_flg = '1'                            -- 貸出対象外フラグON
     /*END*/
-    /*IF is_lend_ng == false*/
+    /*IF is_lend_ng == false */
     , lend_ng_flg = '0'                            -- 貸出対象外フラグOFF
     /*END*/
-    /*IF is_disposal == true*/
+    /*IF is_disposal == true */
     , disposal_flg = '1'                           -- 廃棄フラグON
     /*END*/
-    /*IF is_disposal == false*/
-    , disposal_flg = '1'                           -- 廃棄フラグOFF
+    /*IF is_disposal == false */
+    , disposal_flg = '0'                           -- 廃棄フラグOFF
     /*END*/
     , memo = /*memo*/                              -- 備考
     , upd_date = now()                             -- 更新日時

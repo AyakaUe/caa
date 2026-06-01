@@ -1,0 +1,20 @@
+{
+  "query": "",
+  "count": 0,
+  "records": [
+    {
+      "company_cd": "",
+      "contract_company_cd": "",
+      "contract_company_name": "",
+      "general_item1": "",
+      "general_item2": "",
+      "general_item3": "",
+      "memo": "",
+      "add_date": "",
+      "add_user": "",
+      "upd_date": "",
+      "upd_user": "",
+      "delete_flg": ""
+    }
+  ]
+}
