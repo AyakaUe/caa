@@ -10,10 +10,21 @@ for (var i = 0; i < $variable.optionalParameter.userParameter.caa_t_contractor_p
     } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name.match(name_regex)) {
         return true;
     }
-    if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana == "") {
-        return true;
-    } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana.match(kana_regex)) {
-        return true;
+    // アカウント有の場合はよみがな必須
+    if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].provided_account_flg == "01") {
+        if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana == "") {
+            console.log("contract_user_kana is null");
+            return true;
+        } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana.match(kana_regex)) {
+            console.log("contract_user_kana is invalid");
+            return true;
+        }
+    } else {
+        if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana != ""
+            && !$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana_no_check.match(kana_regex)) {
+            console.log("contract_user_kana_no_check is invalid");
+            return true;
+        }
     }
     if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].provided_account_flg == "") {
         return true;
