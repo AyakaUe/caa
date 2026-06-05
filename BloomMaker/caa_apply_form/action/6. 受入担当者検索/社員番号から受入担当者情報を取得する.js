@@ -19,12 +19,7 @@ function getReceiveUserInfo(employeeNo, dept_name, records) {
         receive_employee_no: user.employee_no,
         receive_user_name: user.user_name,
         receive_post_cd: user.post_cd,
-        receive_post_name: user.post_name,
-        receive_dept_cd: user.dept_cd,
-        receive_dept_name: user.dept_name,
-        receive_company_cd: user.company_cd,
-        receive_company_name: user.company_name,
-        receive_company_short: user.company_short
+        receive_post_name: user.post_name
     };
 }
 
