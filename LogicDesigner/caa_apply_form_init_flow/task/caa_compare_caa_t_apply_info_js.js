@@ -50,6 +50,9 @@ function run(input) {
      * @returns 差異の有無
      */
     function hasDiff(key) {
+        if (records.length === 1) {
+            return false;
+        }
         var baseValue = normalize(records[0][key]);
         for (var i = 1; i < records.length; i++) {
             if (normalize(records[i][key]) !== baseValue) {
