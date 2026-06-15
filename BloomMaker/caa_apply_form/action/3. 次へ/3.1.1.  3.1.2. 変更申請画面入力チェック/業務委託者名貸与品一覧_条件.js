@@ -2,28 +2,46 @@
 /**  業務委託者名　正規表現 */
 const name_regex = /^.+[ \u3000]+.+$/;
 /**  業務委託者名（よみがな）　正規表現 */
-const kana_regex = /^(?:[\u3040-\u309Fー]+|[A-Za-z]+)(?:[ \u3000]+(?:[\u3040-\u309Fー]+|[A-Za-z]+))+$/;
+const kana_regex =
+  /^(?:[\u3040-\u309F\u30A0-\u30FFー]+|[A-Za-z]+)(?:[ \u3000]+(?:[\u3040-\u309F\u30A0-\u30FFー]+|[A-Za-z]+))+$/;
+
+
 
 for (var i = 0; i < $variable.optionalParameter.userParameter.caa_t_contractor_provided_item.length; i++) {
-    if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name == ""
-        || $variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name == null) {
-        return true;
-    } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name.match(name_regex)) {
+    try {
+        if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name == ""
+            || $variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name == null) {
+            console.log("業務委託者名が未入力");
+            return true;
+        } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_name.match(name_regex)) {
+            console.log("業務委託者名が正規表現にマッチしない");
+            return true;
+        }
+    } catch (e) {
+        console.log("業務委託者名が未入力" + e);
         return true;
     }
     // アカウント有の場合はよみがな必須
-    if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].provided_account_flg == "01") {
-        if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana == ""
-            || $variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana == null) {
-            return true;
-        } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana.match(kana_regex)) {
-            return true;
+    try {
+        if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].provided_account_flg == "01") {
+            if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana == ""
+                || $variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana == null) {
+                console.log("業務委託者名（よみがな）が未入力");
+                return true;
+            } else if (!$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana.match(kana_regex)) {
+                console.log("業務委託者名（よみがな）が正規表現にマッチしない");
+                return true;
+            }
+        } else {
+            if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana_no_check != ""
+                && $variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana_no_check != null
+                && !$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana_no_check.match(kana_regex)) {
+                return true;
+            }
         }
-    } else {
-        if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana != ""
-            && !$variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].contract_user_kana_no_check.match(kana_regex)) {
-            return true;
-        }
+    } catch (e) {
+        console.log("業務委託者名（よみがな）が未入力" + e);
+        return true;
     }
     if ($variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].provided_account_flg == ""
         || $variable.optionalParameter.userParameter.caa_t_contractor_provided_item[i].provided_account_flg == null) {
