@@ -18,7 +18,7 @@ const ADD_FLG = {
 };
 
 // 申請処理者トランから追加フラグ自動の審査者一覧設定
-$variable.wf10_public_group.splice(0, 1);
+$variable.wf10_public_group = [];
 $variable.wf10_public_group.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.審査者 && item.add_flg === ADD_FLG.自動).map(item => ({
     cd: item.group_cd,
     name: item.group_name
@@ -58,28 +58,28 @@ Object.assign($variable.wf20_3_caa_t_request_processor, ...$input.caa_t_request_
 })));
 
 // 申請処理者トランから追加フラグ自動の汎用承認者一覧設定
-$variable.wf30_public_group.splice(0, 1);
+$variable.wf30_public_group = [];
 $variable.wf30_public_group.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.汎用承認者 && item.add_flg === ADD_FLG.自動).map(item => ({
     cd: item.group_cd,
     name: item.group_name
 })));
 
 // 申請処理者トランから追加フラグ自動の情シス承認者一覧設定
-$variable.wf40_public_group.splice(0, 1);
+$variable.wf40_public_group = [];
 $variable.wf40_public_group.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.情シス承認者 && item.add_flg === ADD_FLG.自動).map(item => ({
     cd: item.group_cd,
     name: item.group_name
 })));
 
 // 申請処理者トランから追加フラグ自動の決裁者一覧設定
-$variable.wf50_public_group.splice(0, 1);
+$variable.wf50_public_group = [];
 $variable.wf50_public_group.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.決裁者 && item.add_flg === ADD_FLG.自動).map(item => ({
     cd: item.group_cd,
     name: item.group_name
 })));
 
 // 申請処理者トランから追加フラグ自動の通知者一覧設定
-$variable.wf60_public_group.splice(0, 1);
+$variable.wf60_public_group = [];
 $variable.wf60_public_group.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.通知者 && item.add_flg === ADD_FLG.自動).map(item => ({
     cd: item.group_cd,
     name: item.group_name
@@ -88,7 +88,7 @@ $variable.wf60_public_group.push(...$input.caa_t_request_processor.filter(item =
 /** ユーザ追加の審査者・通知者の設定 */
 
 // 申請処理者トランから追加フラグ手動の審査者一覧設定
-$variable.wf10_caa_t_request_processor.splice(0, 1);
+$variable.wf10_caa_t_request_processor = [];
 $variable.wf10_caa_t_request_processor.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.審査者 && item.add_flg === ADD_FLG.手動).map(item => ({
     user_name: item.user_name,
     user_cd: item.user_cd,
@@ -100,7 +100,7 @@ $variable.wf10_caa_t_request_processor.push(...$input.caa_t_request_processor.fi
 })));
 
 // 申請処理者トランから追加フラグ手動の通知者一覧設定
-$variable.wf60_caa_t_request_processor.splice(0, 1);
+$variable.wf60_caa_t_request_processor = [];
 $variable.wf60_caa_t_request_processor.push(...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.通知者 && item.add_flg === ADD_FLG.手動).map(item => ({
     user_name: item.user_name,
     user_cd: item.user_cd,
