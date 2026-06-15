@@ -281,7 +281,10 @@
   "folder_access_exist_values": [],
   "contract_company_labels": [],
   "contract_company_values": [],
+  "work_company_labels": [],
+  "work_company_values": [],
   "is_contract_company_same": false,
+  "is_receive_department_checked": true,
   "is_receive_user_checked": true,
   "is_contract_end_plan_date": false,
   "is_receive_plan_end_date": false,
@@ -330,6 +333,26 @@
       }
     ]
   },
+  "get_department_list_param": {
+    "company_cd": "",
+    "base_date": null,
+    "user_cd": "",
+    "is_receive": false
+  },
+  "get_department_list_result": {
+    "query": "",
+    "count": 0,
+    "records": [
+      {
+        "department_cd": "",
+        "department_set_cd": "",
+        "department_name": "",
+        "company_cd": "",
+        "company_name": "",
+        "company_short_name": ""
+      }
+    ]
+  },
   "caa_check_caa_t_contractor_ledger_param": {
     "ledgers": [
       {
@@ -353,6 +376,14 @@
     "company_cd": "",
     "dept_cd": "",
     "post_cd": ""
+  },
+  "selected_departments": {
+    "department_cd": "",
+    "department_set_cd": "",
+    "department_name": "",
+    "company_cd": "",
+    "company_name": "",
+    "company_short_name": ""
   },
   "wf10_public_group": [
     {

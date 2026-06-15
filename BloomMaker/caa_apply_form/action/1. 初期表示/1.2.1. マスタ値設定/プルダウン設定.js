@@ -22,3 +22,6 @@ $variable.folder_access_exist_values = [''].concat($input.folder_access_exist.ma
 // 委託先マスタ
 $variable.contract_company_labels = [''].concat($input.contract_company_list.map(pulldown => pulldown.contract_company_name));
 $variable.contract_company_values = [''].concat($input.contract_company_list.map(pulldown => pulldown.contract_company_cd));
+// 複数会社利用管理マスタ
+$variable.work_company_labels = [''].concat($input.work_company_list.map(pulldown => pulldown.additional_company_name));
+$variable.work_company_values = [''].concat($input.work_company_list.map(pulldown => pulldown.additional_company_cd));

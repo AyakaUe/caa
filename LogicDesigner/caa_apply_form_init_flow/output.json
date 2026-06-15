@@ -488,6 +488,13 @@
     "request_kbn_cd": "",
     "manage_id": ""
   },
+    "work_company_list": [
+    {
+      "additional_company_cd": "",
+      "additional_company_name": "",
+      "memo": ""
+    }
+  ],
   "public_group_set_cd": "",
   "processTargetCd": ""
 }
