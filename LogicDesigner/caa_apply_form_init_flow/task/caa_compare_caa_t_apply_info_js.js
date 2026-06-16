@@ -10,7 +10,9 @@ function run(input) {
 
     if (!records || records.length === 0) {
         return {
+            receive_dept_mod_flg: "1",
             receive_mod_flg: "1",
+            work_mod_flg: "1",
             contract_manage_user_name_mod_flg: "1",
             contract_work_content_mod_flg: "1",
             contract_end_plan_date_mod_flg: "1",
@@ -18,6 +20,7 @@ function run(input) {
             attend_count_mod_flg: "1",
             work_location_mod_flg: "1",
             doc_management_no_mod_flg: "1",
+            indv_doc_management_no_mod_flg: "1",
             contract_start_date: null,
             receive_start_date: null
         };
@@ -63,7 +66,9 @@ function run(input) {
     }
 
     return {
+        receive_dept_mod_flg: hasDiff("receive_dept_cd") ? "0" : "1",
         receive_mod_flg: hasDiff("receive_employee_no") ? "0" : "1",
+        work_mod_flg: hasDiff("work_dept_cd") ? "0" : "1",
         contract_manage_user_name_mod_flg: hasDiff("contract_manage_user_name") ? "0" : "1",
         contract_work_content_mod_flg: hasDiff("contract_work_content") ? "0" : "1",
         contract_end_plan_date_mod_flg: hasDiff("contract_end_plan_date") ? "0" : "1",
@@ -71,6 +76,7 @@ function run(input) {
         attend_count_mod_flg: hasDiff("attend_count") ? "0" : "1",
         work_location_mod_flg: hasDiff("work_location") ? "0" : "1",
         doc_management_no_mod_flg: hasDiff("doc_management_no") ? "0" : "1",
+        indv_doc_management_no_mod_flg: hasDiff("indv_doc_management_no") ? "0" : "1",
         contract_start_date: hasDiff("contract_start_date") ? null : records[0]["contract_start_date"],
         receive_start_date: hasDiff("receive_start_date") ? null : records[0]["receive_start_date"]
     };
