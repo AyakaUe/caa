@@ -24,7 +24,7 @@ SELECT
     , ctcl.receive_post_cd                      -- 担当者：役職コード
     , ctcl.receive_post_name                    -- 担当者：役職名
     , ctcl.work_dept_cd                         -- 就業先部署コード
-    , ctcl.work_dept_name                       -- 就業先部署名
+    , COALESCE(ctcl.work_dept_name, work.department_name) AS work_dept_name -- 就業先部署名
     , ctcl.work_company_cd                      -- 就業先会社コード
     , ctcl.work_company_name                    -- 就業先会社名
     , ctcl.work_company_short                   -- 就業先会社略称
@@ -92,6 +92,35 @@ FROM
             x.rn = 1
     ) id 
         ON id.department_cd = ctcl.receive_dept_cd 
+    LEFT OUTER JOIN ( -- 就業先部署名をマスタから取得
+        SELECT
+            department_cd
+            , department_name 
+            , company_cd
+        FROM
+            ( 
+                SELECT
+                    d.department_cd
+                    , d.department_name
+                    , company_cd
+                    , ROW_NUMBER() OVER ( -- 複数あった場合古いデータを使用
+                        PARTITION BY
+                            d.department_cd 
+                        ORDER BY
+                            d.start_date ASC
+                    ) AS rn 
+                FROM
+                    imm_department d 
+                WHERE
+                    d.end_date > COALESCE(/*base_date*/NULL, CURRENT_DATE) 
+                    AND d.locale_id = 'ja' 
+                    AND d.delete_flag = '0'
+            ) x 
+        WHERE
+            x.rn = 1
+    ) WORK 
+        ON WORK.department_cd = ctcl.work_dept_cd 
+        AND WORK.company_cd = ctcl.work_company_cd 
 WHERE
     ctcl.manage_id IN /*manage_ids*/() -- 管理ID
 ORDER BY
