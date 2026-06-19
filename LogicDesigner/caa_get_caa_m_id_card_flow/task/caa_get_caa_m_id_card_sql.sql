@@ -38,7 +38,16 @@ FROM
 WHERE
     1 = 1 
 /*IF company_cd != '' && company_cd != null */
-    AND cmic.company_cd = /*company_cd*/'' 
+    AND cmic.company_cd IN ( 
+        SELECT
+            MULTI.additional_company_cd 
+        FROM
+            PUBLIC.caa_m_multi_company_use MULTI 
+        WHERE
+            MULTI.company_cd = /*company_cd*/'' 
+            AND MULTI.locale_id = 'ja' 
+            AND MULTI.delete_flg = '0'
+    ) 
 /*END*/
 /*IF id_no != '' && id_no != null */
     AND cmic.id_no LIKE '%' || /*id_no*/'' || '%' 
