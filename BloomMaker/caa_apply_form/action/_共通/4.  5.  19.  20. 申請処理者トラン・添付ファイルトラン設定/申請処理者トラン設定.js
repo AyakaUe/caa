@@ -210,7 +210,7 @@ if ($variable.wf20_1_caa_t_request_processor.user_cd !== "") {
 }
 
 // 承認者2設定
-if ($variable.wf20_2_caa_t_request_processor.user_cd !== "") {
+if ($variable.wf20_2_caa_t_request_processor.user_cd !== "" && $variable.wf20_2_caa_t_request_processor.user_cd !== null) {
     addRequestProcessor(
         ROLE_CD.承認者2,
         ADD_FLG.手動,
