@@ -34,7 +34,7 @@ function run(input) {
         };
     }
 
-    // 役割コードが通知者の処理者コードを取得
+    // 処理者コードを取得
     for (var i = 0; i < records.length; i++) {
         if (records[i].processor_cd !== "" && records[i].processor_cd !== null) {
             processors.push(records[i].processor_cd);
