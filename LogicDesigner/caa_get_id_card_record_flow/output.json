@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "upd_date": "",
+      "status": "",
+      "account_no": "",
+      "contract_user_name": "",
+      "receive_start_date": "",
+      "receive_end_date": ""
+    }
+  ],
+  "count": 0,
+  "error": false,
+  "message": ""
+}

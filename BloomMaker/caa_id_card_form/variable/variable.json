@@ -61,6 +61,27 @@
     "error": false,
     "message": ""
   },
+  "historyParam": {
+    "company_cd": "",
+    "id_no": "",
+    "card_no": ""
+  },
+  "historyResult": {
+    "records": [
+      {
+        "upd_date": null,
+        "del_status": "",
+        "return_status": "",
+        "account_no": "",
+        "contract_user_name": "",
+        "receive_start_date": null,
+        "receive_end_date": null
+      }
+    ],
+    "count": 0,
+    "error": false,
+    "message": ""
+  },
   "defaultUpdateParam": {
     "displayMode": "",
     "company_cd": "",

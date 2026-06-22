@@ -9,6 +9,7 @@
   },
   "tableHeader": {
     "edit": "編集",
+    "history": "履歴参照",
     "id_no": "ID番号",
     "card_no": "カードNo.",
     "lend_ng_flg": "貸出対象外",
@@ -21,6 +22,12 @@
     "edit": {
       "type": "button-action",
       "label": "編集",
+      "disabled": false,
+      "hiddenColumn": false
+    },
+    "history": {
+      "type": "button-action",
+      "label": "履歴参照",
       "disabled": false,
       "hiddenColumn": false
     }
