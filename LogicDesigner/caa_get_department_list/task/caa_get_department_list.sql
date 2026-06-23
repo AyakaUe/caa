@@ -118,8 +118,6 @@ FROM
             AND dm.end_date > (SELECT base_date FROM params) 
             AND dm.locale_id = 'ja' 
             AND dm.delete_flag = '0'
-    ) 
-OUTPUT
-ORDER BY
-OUTPUT
-    .department_cd; 
+    ) OUTPUT
+ORDER BY OUTPUT.company_cd
+    , OUTPUT.department_cd;
