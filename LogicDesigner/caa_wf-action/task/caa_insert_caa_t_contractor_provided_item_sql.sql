@@ -6,6 +6,7 @@ INTO PUBLIC.caa_t_contractor_provided_item(
     , version
     , manage_no                                 -- 管理番号
     , request_kbn_cd
+    , account_no                                -- アカウント番号
     , contract_user_name                        -- 業務委託者名
     , contract_user_kana                        -- 業務委託者名（よみがな）
     , provided_account_flg
@@ -30,6 +31,7 @@ VALUES (
     , /*version*/
     , /*manage_no*/                                -- 管理番号
     , /*request_kbn_cd*/
+    , /*account_no*/                               -- アカウント番号
     , /*contract_user_name*/                       -- 業務委託者名
     , /*contract_user_kana*/                       -- 業務委託者名（よみがな）
     , /*provided_account_flg*/
