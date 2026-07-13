@@ -372,7 +372,7 @@
   "caa_check_caa_t_contractor_ledger_param": {
     "ledgers": [
       {
-        "manage_id": "",
+        "manage_no": "",
         "version": ""
       }
     ]
