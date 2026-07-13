@@ -63,4 +63,4 @@ WHERE
 /*END*/
     AND cmic.delete_flg <> '1' 
 ORDER BY
-    cmic.card_no
+    cmic.id_no

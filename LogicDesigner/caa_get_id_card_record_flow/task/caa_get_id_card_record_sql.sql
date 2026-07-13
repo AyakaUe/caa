@@ -42,9 +42,17 @@ FROM
                 FROM
                     PUBLIC.caa_t_id_card_ledger ID 
                 WHERE
-                    ID.company_cd = /*company_cd*/'' 
+                    ID.company_cd IN ( 
+                        SELECT
+                            MULTI.additional_company_cd 
+                        FROM
+                            PUBLIC.caa_m_multi_company_use MULTI 
+                        WHERE
+                            MULTI.company_cd = /*company_cd*/'' 
+                            AND MULTI.locale_id = 'ja' 
+                            AND MULTI.delete_flg = '0'
+                    ) 
                     AND ID.id_no = /*id_no*/'' 
-                    AND ID.card_no = /*card_no*/''
             )
     ) del 
         ON del.insert_id = ID.insert_id 
@@ -67,9 +75,17 @@ FROM
 WHERE
     -- ステータス変更になったデータを絞り込み
     (del.del_flg IS NOT NULL AND del.del_flg <> '') 
-    AND ID.company_cd = /*company_cd*/'' 
+    AND ID.company_cd IN ( 
+        SELECT
+            MULTI.additional_company_cd 
+        FROM
+            PUBLIC.caa_m_multi_company_use MULTI 
+        WHERE
+            MULTI.company_cd = /*company_cd*/'' 
+            AND MULTI.locale_id = 'ja' 
+            AND MULTI.delete_flg = '0'
+    ) 
     AND ID.id_no = /*id_no*/'' 
-    AND ID.card_no = /*card_no*/'' 
 UNION ALL 
 SELECT
     -- 返却
@@ -115,9 +131,17 @@ FROM
                 FROM
                     PUBLIC.caa_t_id_card_ledger ID 
                 WHERE
-                    ID.company_cd = /*company_cd*/'' 
+                    ID.company_cd IN ( 
+                        SELECT
+                            MULTI.additional_company_cd 
+                        FROM
+                            PUBLIC.caa_m_multi_company_use MULTI 
+                        WHERE
+                            MULTI.company_cd = /*company_cd*/'' 
+                            AND MULTI.locale_id = 'ja' 
+                            AND MULTI.delete_flg = '0'
+                    ) 
                     AND ID.id_no = /*id_no*/'' 
-                    AND ID.card_no = /*card_no*/''
             )
     ) RETURN 
         ON RETURN.insert_id = ID.insert_id 
@@ -147,9 +171,17 @@ WHERE
         RETURN.return_flg IS NOT NULL 
         AND RETURN.return_flg <> ''
     ) 
-    AND ID.company_cd = /*company_cd*/'' 
+    AND ID.company_cd IN ( 
+        SELECT
+            MULTI.additional_company_cd 
+        FROM
+            PUBLIC.caa_m_multi_company_use MULTI 
+        WHERE
+            MULTI.company_cd = /*company_cd*/'' 
+            AND MULTI.locale_id = 'ja' 
+            AND MULTI.delete_flg = '0'
+    ) 
     AND ID.id_no = /*id_no*/'' 
-    AND ID.card_no = /*card_no*/'' 
 ORDER BY
     upd_date
     , status;
