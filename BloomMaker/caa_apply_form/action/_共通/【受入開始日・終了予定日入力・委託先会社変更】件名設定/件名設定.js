@@ -23,7 +23,7 @@ var title = $constant.subject_matter;
  * 03：終了*/
 var request_kbn_cd = $input.caa_t_apply_info.request_kbn_cd;
 /** 会社名 */
-var companyName = $input.comp_ath_list[0].company_name;
+var companyName = $variable.optionalParameter.userParameter.caa_t_apply_info.contract_company_name;
 /** 受入開始日 */
 var receive_start_date = $variable.optionalParameter.userParameter.caa_t_apply_info.receive_start_date;
 /** 受入終了予定日 */
