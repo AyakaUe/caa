@@ -327,7 +327,8 @@
     "company_cd": "",
     "dept_cd": "",
     "base_date": null,
-    "is_receive": false
+    "is_receive": false,
+    "is_wf60": false
   },
   "get_user_list_result": {
     "query": "",
