@@ -14,11 +14,12 @@ SELECT
     , imm_user.start_date 
 FROM
     imm_user 
-    INNER JOIN b_m_account_role_b ROLE          -- アカウントロール
+/*IF is_wf60 != true */
+    INNER JOIN b_m_account_role_b ROLE          -- アカウントロール 通知者だけロールの条件外す
         ON imm_user.user_cd = ROLE.user_cd 
-/*IF is_receive != true */
+    /*IF is_receive != true */
         AND ROLE.valid_start_date <= coalesce(/*base_date*/NULL, CURRENT_DATE) 
-/*END*/
+    /*END*/
         AND ROLE.valid_end_date > coalesce(/*base_date*/NULL, CURRENT_DATE) 
         AND ROLE.role_id IN ( 
             SELECT
@@ -30,6 +31,7 @@ FROM
                 CMUC.company_cd = /*company_cd*/'' 
             /*END*/
         ) 
+/*END*/
     INNER JOIN imm_department_ath 
         ON imm_user.user_cd = imm_department_ath.user_cd 
 /*IF is_receive != true */
