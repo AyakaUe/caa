@@ -295,6 +295,8 @@
   "contract_company_values": [],
   "work_company_labels": [],
   "work_company_values": [],
+  "exit_edit": true,
+  "isChanged": false,
   "is_contract_company_same": false,
   "is_receive_department_checked": true,
   "is_receive_user_checked": true,
