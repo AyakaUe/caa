@@ -35,7 +35,6 @@ switch ($input.request.imwNodeId) {
         // 役割コード「申請者」のデータを特定し、そのデータの処理者情報欄にログインユーザ情報を設定する
         for (var i = 0; i < $variable.optionalParameter.userParameter.caa_t_request_processor.length; i++) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.申請者) {
-                console.log("申請ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 $variable.authUserDepartmentInfo.departmentCd = $input.comp_ath_list[0].department_cd;
@@ -49,7 +48,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.審査者
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("審査ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd !== null
@@ -71,7 +69,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.承認者1
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("承認1ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 $variable.authUserDepartmentInfo.departmentCd = $variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd;
@@ -85,7 +82,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.承認者2
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("承認2ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 $variable.authUserDepartmentInfo.departmentCd = $variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd;
@@ -99,7 +95,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.承認者3
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("承認3ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 $variable.authUserDepartmentInfo.departmentCd = $variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd;
@@ -113,7 +108,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.汎用承認者
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("承認4ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd !== null
@@ -135,7 +129,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.情シス承認者
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("情シス承認者ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd !== null
@@ -157,7 +150,6 @@ switch ($input.request.imwNodeId) {
             if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].role_cd === ROLE_CD.決裁者
                 && $variable.optionalParameter.userParameter.caa_t_request_processor[i].original_act_target_cd === $input.processTargetCd
             ) {
-                console.log("決裁者ノードの処理者トラン設定");
                 setApplicantInfoToProcessorTran();
                 // 実行者所属設定
                 if ($variable.optionalParameter.userParameter.caa_t_request_processor[i].dept_cd !== null
@@ -174,7 +166,6 @@ switch ($input.request.imwNodeId) {
         }
         break;
     default:
-        console.log("未知のノードID");
 }
 
 /** 処理者トランに申請者情報をセット

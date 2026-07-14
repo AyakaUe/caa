@@ -121,7 +121,6 @@ function getProcessingUserInfo(roleCd, addFlg) {
     var userInfos = [];
     for (const item of $input.caa_t_request_processor) {
         if (item.role_cd === roleCd && item.add_flg === addFlg) {
-            console.log(`役割コード${roleCd}の処理者情報を設定:`, item);
             userInfos.push({
                 user_data_id: item.user_data_id,
                 matter_no: item.matter_no,
@@ -165,7 +164,6 @@ function getRequestProcessorLists(roleCd, addFlg) {
     var userInfos = [];
     for (const item of $input.caa_t_request_processor) {
         if (item.role_cd === roleCd && item.add_flg === addFlg) {
-            console.log(`役割コード${roleCd}の処理者情報を設定:`, item);
             userInfos.push({
                 user_name: item.user_name,
                 user_cd: item.user_cd,
