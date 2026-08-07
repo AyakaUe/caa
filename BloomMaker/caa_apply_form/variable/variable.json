@@ -216,7 +216,7 @@
       "readonly": false
     },
     "priorityLevel": {
-      "display": true,
+      "display": false,
       "readonly": false
     },
     "processComment": {
