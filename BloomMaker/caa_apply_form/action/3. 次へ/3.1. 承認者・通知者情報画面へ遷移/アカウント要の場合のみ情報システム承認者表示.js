@@ -1,5 +1,4 @@
 
-$variable.is_wf40_disabled = true;
 
 /** 申請区分コード */
 const requestKbnCd = {
