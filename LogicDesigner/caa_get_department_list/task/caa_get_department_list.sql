@@ -23,12 +23,25 @@ FROM
                     SELECT
                         regexp_split_to_table((SELECT company_cd_in FROM params), ',')
                 ) 
-        /*IF is_receive != true */
+            /*IF is_receive != true */
                 AND company.start_date <= (SELECT base_date FROM params) 
-        /*END*/
+            /*END*/
                 AND company.end_date > (SELECT base_date FROM params) 
                 AND company.locale_id = 'ja' 
                 AND company.delete_flag = '0' 
+        /*IF is_ledger == true */
+            INNER JOIN imm_department_inc_ath imm 
+                ON imm.department_cd = dm.department_cd
+            /*IF is_receive != true */
+                AND imm.start_date <= (SELECT base_date FROM params) 
+            /*END*/
+                AND imm.end_date > (SELECT base_date FROM params)  
+                AND imm.delete_flag = '0' 
+            INNER JOIN caa_m_cntr_department caa 
+                ON caa.company_cd = imm.company_cd 
+                AND caa.department_cd = imm.parent_department_cd 
+                AND caa.delete_flg = '0' 
+        /*END*/
         WHERE
             1 = 1 
         /*IF user_cd != '' && user_cd != null*/

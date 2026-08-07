@@ -353,7 +353,8 @@
     "company_cd": "",
     "base_date": null,
     "user_cd": "",
-    "is_receive": false
+    "is_receive": false,
+    "is_ledger": false
   },
   "get_department_list_result": {
     "query": "",
