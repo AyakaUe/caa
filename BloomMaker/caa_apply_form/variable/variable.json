@@ -401,12 +401,24 @@
     "company_name": "",
     "company_short_name": ""
   },
+  "selected_wf20_public_group": {
+    "cd": "",
+    "name": ""
+  },
   "wf10_public_group": [
     {
       "cd": "",
       "name": ""
     }
   ],
+  "wf20_2_public_group": {
+    "cd": "",
+    "name": ""
+  },
+  "wf20_3_public_group": {
+    "cd": "",
+    "name": ""
+  },
   "wf30_public_group": [
     {
       "cd": "",

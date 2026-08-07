@@ -210,7 +210,7 @@ if ($variable.wf20_1_caa_t_request_processor.user_cd !== "") {
 }
 
 // 承認者2設定
-if ($variable.wf20_2_caa_t_request_processor.user_cd !== "") {
+if ($input.wf_20_2_group_disable_flg[0].is_disable && $variable.wf20_2_caa_t_request_processor.user_cd !== "") {
     addRequestProcessor(
         ROLE_CD.承認者2,
         ADD_FLG.手動,
@@ -224,10 +224,24 @@ if ($variable.wf20_2_caa_t_request_processor.user_cd !== "") {
         "",
         ""
     );
+} else if (!$input.wf_20_2_group_disable_flg[0].is_disable && $variable.wf20_2_public_group.name !== "") {
+    addRequestProcessor(
+        ROLE_CD.承認者2,
+        ADD_FLG.手動,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        $variable.wf20_2_public_group.cd,
+        $variable.wf20_2_public_group.name
+    );
 }
 
 // 承認者3設定
-if ($variable.wf20_3_caa_t_request_processor.user_cd !== "") {
+if ($input.wf_20_3_group_disable_flg[0].is_disable && $variable.wf20_3_caa_t_request_processor.user_cd !== "") {
     addRequestProcessor(
         ROLE_CD.承認者3,
         ADD_FLG.手動,
@@ -240,6 +254,20 @@ if ($variable.wf20_3_caa_t_request_processor.user_cd !== "") {
         $variable.wf20_3_caa_t_request_processor.post_name,
         "",
         ""
+    );
+} else if (!$input.wf_20_3_group_disable_flg[0].is_disable && $variable.wf20_3_public_group.name !== "") {
+    addRequestProcessor(
+        ROLE_CD.承認者3,
+        ADD_FLG.手動,
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        $variable.wf20_3_public_group.cd,
+        $variable.wf20_3_public_group.name
     );
 }
 

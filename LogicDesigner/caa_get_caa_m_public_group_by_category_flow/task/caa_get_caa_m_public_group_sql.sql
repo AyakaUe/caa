@@ -17,6 +17,18 @@ SELECT DISTINCT
     ) AS wf10_public_group_name
     , ( 
         CASE 
+            WHEN mpg.public_group_category = 'wf20' 
+                THEN mpg.public_group_cd 
+            END
+    ) AS wf20_public_group_cd
+    , ( 
+        CASE 
+            WHEN mpg.public_group_category = 'wf20' 
+                THEN imm.public_group_name 
+            END
+    ) AS wf20_public_group_name
+    , ( 
+        CASE 
             WHEN mpg.public_group_category = 'wf30' 
                 THEN mpg.public_group_cd 
             END
@@ -88,7 +100,7 @@ SELECT DISTINCT
             END
     ) AS inv_public_group_name
     , ( 
-         CASE 
+        CASE 
             WHEN mpg.public_group_category = 'jouhou' 
                 THEN mpg.public_group_cd 
             END
@@ -155,6 +167,7 @@ WHERE
     AND mpg.end_date IS NULL 
     OR CURRENT_DATE <= /*draft_date*/'2999/12/31' 
 /*END*/
+    AND mpg.delete_flg = '0' 
 ORDER BY
     mpg.company_cd
     , mpg.public_group_set_cd

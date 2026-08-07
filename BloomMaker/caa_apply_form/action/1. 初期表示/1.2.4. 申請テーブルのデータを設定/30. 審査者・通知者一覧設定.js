@@ -36,26 +36,42 @@ Object.assign($variable.wf20_1_caa_t_request_processor, ...$input.caa_t_request_
 })));
 
 // 申請処理者トランから承認者2設定
-Object.assign($variable.wf20_2_caa_t_request_processor, ...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.承認者2 && item.add_flg === ADD_FLG.手動).map(item => ({
-    user_name: item.user_name,
-    user_cd: item.user_cd,
-    employee_no: item.employee_no,
-    dept_cd: item.dept_cd,
-    dept_name: item.dept_name,
-    post_cd: item.position_cd,
-    post_name: item.position_name
-})));
+if ($input.wf_20_2_group_disable_flg[0].is_disable) {
+    Object.assign($variable.wf20_2_caa_t_request_processor, ...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.承認者2 && item.add_flg === ADD_FLG.手動).map(item => ({
+        user_name: item.user_name,
+        user_cd: item.user_cd,
+        employee_no: item.employee_no,
+        dept_cd: item.dept_cd,
+        dept_name: item.dept_name,
+        post_cd: item.position_cd,
+        post_name: item.position_name
+    })));
+} else {
+    Object.assign($variable.wf20_2_public_group, ...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.承認者2 && item.add_flg === ADD_FLG.手動).map(item => ({
+        cd: item.group_cd,
+        name: item.group_name
+    })));
+}
+
 
 // 申請処理者トランから承認者3設定
-Object.assign($variable.wf20_3_caa_t_request_processor, ...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.承認者3 && item.add_flg === ADD_FLG.手動).map(item => ({
-    user_name: item.user_name,
-    user_cd: item.user_cd,
-    employee_no: item.employee_no,
-    dept_cd: item.dept_cd,
-    dept_name: item.dept_name,
-    post_cd: item.position_cd,
-    post_name: item.position_name
-})));
+if ($input.wf_20_3_group_disable_flg[0].is_disable) {
+    Object.assign($variable.wf20_3_caa_t_request_processor, ...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.承認者3 && item.add_flg === ADD_FLG.手動).map(item => ({
+        user_name: item.user_name,
+        user_cd: item.user_cd,
+        employee_no: item.employee_no,
+        dept_cd: item.dept_cd,
+        dept_name: item.dept_name,
+        post_cd: item.position_cd,
+        post_name: item.position_name
+    })));
+} else {
+    Object.assign($variable.wf20_3_public_group, ...$input.caa_t_request_processor.filter(item => item.role_cd === ROLE_CD.承認者3 && item.add_flg === ADD_FLG.手動).map(item => ({
+        cd: item.group_cd,
+        name: item.group_name
+    })));
+}
+
 
 // 申請処理者トランから追加フラグ自動の汎用承認者一覧設定
 $variable.wf30_public_group = [];
@@ -70,6 +86,9 @@ $variable.wf40_public_group.push(...$input.caa_t_request_processor.filter(item =
     cd: item.group_cd,
     name: item.group_name
 })));
+if ($variable.wf40_public_group.length !== 0) {
+    $variable.is_wf40_disabled = false;
+}
 
 // 申請処理者トランから追加フラグ自動の決裁者一覧設定
 $variable.wf50_public_group = [];
