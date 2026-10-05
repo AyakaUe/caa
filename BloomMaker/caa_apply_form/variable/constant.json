@@ -53,5 +53,9 @@
     "required_asterisk": "required-asterisk",
     "required": "required",
     "optional": "optional"
+  },
+  "draft_date": {
+    "max": "2999-12-31T00:00:00.000+0900",
+    "min": "1900-01-01T00:00:00.000+0900"
   }
 }
