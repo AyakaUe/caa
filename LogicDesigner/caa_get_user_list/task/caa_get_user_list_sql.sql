@@ -8,6 +8,7 @@ FROM
             SELECT
                 CAST(/*company_cd*/'' AS text) AS company_cd_in -- 会社コード※カンマ区切りで複数会社指定
                 , CAST( coalesce(/*base_date*/NULL, CURRENT_DATE) AS DATE) AS base_date
+                , CAST(/*dept_cd*/'' AS text) AS dept_cd_in -- 組織コード※カンマ区切りで複数会社指定
         ) 
         SELECT
             imm_user.user_name AS user_name
@@ -112,7 +113,10 @@ FROM
             ) 
         /*END*/
         /*IF dept_cd != '' && dept_cd != null*/
-            AND imm_department.department_cd = /*dept_cd*/'' --申請者の所属で絞り込む場合は指定
+            AND imm_department.department_cd IN ( 
+                SELECT
+                    regexp_split_to_table((SELECT dept_cd_in FROM params), ',')
+            )                                   --申請者の所属で絞り込む場合は指定
         /*END*/
         ORDER BY
             company_name ASC
