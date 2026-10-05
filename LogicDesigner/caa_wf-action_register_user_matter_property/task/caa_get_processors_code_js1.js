@@ -34,6 +34,8 @@ function run(input) {
     for (var i = 0; i < records.length; i++) {
         if (records[i].role_cd == ROLE_CD.通知者 && records[i].user_cd !== "" && records[i].user_cd !== null) {
             processors.push(records[i].user_cd);
+        } else if (records[i].role_cd == ROLE_CD.通知者 && records[i].group_cd !== "" && records[i].group_cd !== null) {
+            processors.push(records[i].group_cd);
         }
     }
 
