@@ -32,6 +32,7 @@
   "ringiUrl": "https://irg01.bandainamco.co.jp/imart/approval/front/bwfDPc012/init",
   "myAppryUrl": "/imart/caa/caa_my_wf_list",
   "topMenuUrl": "/imart/caa/caa_menu",
+  "mobileUrl": "/imart/caa/caa_mobile_wf",
   "imwPageType": {
     "pageTyp_App": "0",
     "pageTyp_TempSave": "1",
