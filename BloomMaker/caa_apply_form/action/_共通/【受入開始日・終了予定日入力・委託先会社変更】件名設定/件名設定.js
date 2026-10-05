@@ -21,13 +21,15 @@ var title = $constant.subject_matter;
  * 01：新規受入
  * 02：変更
  * 03：終了*/
-var request_kbn_cd = $input.caa_t_apply_info.request_kbn_cd;
+var request_kbn_cd = $input.caa_t_apply_info.request_kbn_cd == null ? "" : $input.caa_t_apply_info.request_kbn_cd;
 /** 会社名 */
-var companyName = $variable.optionalParameter.userParameter.caa_t_apply_info.contract_company_name;
+var contract_company_name = $variable.optionalParameter.userParameter.caa_t_apply_info.contract_company_name == null ? "" : $variable.optionalParameter.userParameter.caa_t_apply_info.contract_company_name;
 /** 受入開始日 */
-var receive_start_date = $variable.optionalParameter.userParameter.caa_t_apply_info.receive_start_date;
+var receive_start_date = $variable.optionalParameter.userParameter.caa_t_apply_info.receive_start_date == null ? "" : $variable.optionalParameter.userParameter.caa_t_apply_info.receive_start_date;
 /** 受入終了予定日 */
-var receive_plan_end_date = $variable.optionalParameter.userParameter.caa_t_apply_info.receive_plan_end_date;
+var receive_end_date = $variable.optionalParameter.userParameter.caa_t_apply_info.receive_end_date == null ? "" : $variable.optionalParameter.userParameter.caa_t_apply_info.receive_end_date;
+/** 会社略称 */
+var company_short_name = $variable.caa_get_comp_ath_list_ld_flow_result.records[0].company_short_name == null ? "" : $variable.caa_get_comp_ath_list_ld_flow_result.records[0].company_short_name;
 
 /****************** 日付のフォーマット変換 ******************/
 // date⇒yyyy/mm/dd string
@@ -44,17 +46,17 @@ function formatDate(date) {
 
 // 受入開始日と受入終了予定日を日付フォーマット変換
 var formattedReceiveStartDate = formatDate(receive_start_date);
-var formattedReceivePlanEndDate = formatDate(receive_plan_end_date);
+var formattedReceiveEndDate = formatDate(receive_end_date);
 
 /****************** 件名の設定 ******************/
 if (request_kbn_cd === requestKbnCd.NEW) {
-    subject += requestKbnName.NEW + title + companyName + " " + formattedReceiveStartDate;
+    subject += requestKbnName.NEW + title + company_short_name + " " + contract_company_name + " " + formattedReceiveStartDate;
 } else if (request_kbn_cd === requestKbnCd.UPDATE) {
-    subject += requestKbnName.UPDATE + title + companyName;
+    subject += requestKbnName.UPDATE + title + company_short_name + " " + contract_company_name;
 } else if (request_kbn_cd === requestKbnCd.DELETE) {
-    subject += requestKbnName.DELETE + title + companyName + " " + formattedReceivePlanEndDate;
+    subject += requestKbnName.DELETE + title + company_short_name + " " + contract_company_name + " " + formattedReceiveEndDate;
 } else {
-    subject += requestKbnName.NEW + title + companyName + " " + formattedReceiveStartDate;
+    subject += requestKbnName.NEW + title + company_short_name + " " + contract_company_name + " " + formattedReceiveStartDate;
 }
 
 // 件名設定
