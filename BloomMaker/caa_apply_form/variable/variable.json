@@ -125,7 +125,6 @@
           "account_no": "",
           "contract_user_name": "",
           "contract_user_kana": "",
-          "contract_user_kana_no_check": "",
           "provided_account_flg": "",
           "provided_account_memo": "",
           "provided_pc_flg": "",
@@ -250,7 +249,6 @@
     "account_no": "",
     "contract_user_name": "",
     "contract_user_kana": "",
-    "contract_user_kana_no_check": "",
     "provided_account_flg": "",
     "provided_account_memo": "",
     "provided_pc_flg": "",
@@ -317,10 +315,8 @@
   "topMenuUrl": "/imart/caa/caa_menu",
   "ringiUrl": "",
   "myAppryUrl": "/imart/caa/caa_my_wf_list",
-  "contract_attached_files_new": [],
   "contract_attached_files": [],
   "is_contract_attached_files_deleted": false,
-  "pledge_attached_files_new": [],
   "pledge_attached_files": [],
   "is_pledge_attached_files_deleted": false,
   "get_user_list_param": {
@@ -822,6 +818,43 @@
   },
   "caa_role_check_flow_result": {
     "can_open": false,
+    "error": false,
+    "errorMessage": ""
+  },
+  "dispMobile": false,
+  "clientTypeId": "",
+  "caa_get_comp_ath_list_ld_flow_param": {
+    "company_cd": "",
+    "user_cd": "",
+    "start_date": null,
+    "end_date": null,
+    "department_cd": ""
+  },
+  "caa_get_comp_ath_list_ld_flow_result": {
+    "records": [
+      {
+        "company_cd": "",
+        "company_name": "",
+        "company_short_name": "",
+        "employee_no": "",
+        "department_cd": "",
+        "department_name": "",
+        "post_cd": "",
+        "post_name": "",
+        "rank": "",
+        "user_cd": "",
+        "user_name": "",
+        "email_address": "",
+        "start_date": null,
+        "end_date": null
+      }
+    ]
+  },
+  "caa_check_doc_management_no_param": {
+    "doc_management_no": ""
+  },
+  "caa_check_doc_management_no_result": {
+    "company_cd": "",
     "error": false,
     "errorMessage": ""
   }
