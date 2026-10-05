@@ -1,4 +1,6 @@
 {
+    "isSmartPhone": false,
+    "clientTypeId": "",
     "request": {
         "company_cd": "",
         "imwUserCode": "",
@@ -265,7 +267,9 @@
             "rank": "",
             "user_cd": "",
             "user_name": "",
-            "email_address": ""
+            "email_address": "",
+            "start_date": null,
+            "end_date": null
         }
     ],
     "contract_company_list": [
@@ -591,6 +595,74 @@
         }
     ],
     "wf_20_3_message": [
+        {
+            "company_cd": "",
+            "item_category": "",
+            "item_content": "",
+            "required_flg": "",
+            "is_required": false,
+            "disable_flg": "",
+            "is_disable": false,
+            "memo": "",
+            "add_date": "",
+            "add_user": "",
+            "upd_date": "",
+            "upd_user": "",
+            "delete_flg": ""
+        }
+    ],
+    "apply_complete_message_red": [
+        {
+            "company_cd": "",
+            "item_category": "",
+            "item_content": "",
+            "required_flg": "",
+            "is_required": false,
+            "disable_flg": "",
+            "is_disable": false,
+            "memo": "",
+            "add_date": "",
+            "add_user": "",
+            "upd_date": "",
+            "upd_user": "",
+            "delete_flg": ""
+        }
+    ],
+    "doc_management_no": [
+        {
+            "company_cd": "",
+            "item_category": "",
+            "item_content": "",
+            "required_flg": "",
+            "is_required": false,
+            "disable_flg": "",
+            "is_disable": false,
+            "memo": "",
+            "add_date": "",
+            "add_user": "",
+            "upd_date": "",
+            "upd_user": "",
+            "delete_flg": ""
+        }
+    ],
+    "contract_attached_files": [
+        {
+            "company_cd": "",
+            "item_category": "",
+            "item_content": "",
+            "required_flg": "",
+            "is_required": false,
+            "disable_flg": "",
+            "is_disable": false,
+            "memo": "",
+            "add_date": "",
+            "add_user": "",
+            "upd_date": "",
+            "upd_user": "",
+            "delete_flg": ""
+        }
+    ],
+    "contract_end_plan_date_message": [
         {
             "company_cd": "",
             "item_category": "",
