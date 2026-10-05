@@ -117,6 +117,26 @@ FROM
                 )
             ) 
         /*END*/
+        /*IF cntr_dept_cd != '' && cntr_dept_cd != null*/
+            AND ( 
+                dm.department_cd IN ( 
+                    SELECT DISTINCT
+                        imm.department_cd 
+                    FROM
+                        imm_department_inc_ath imm 
+                    WHERE
+                        imm.parent_department_cd = /*cntr_dept_cd*/''
+                        AND imm.company_cd IN ( 
+                            SELECT
+                                regexp_split_to_table((SELECT company_cd_in FROM params), ',')
+                        ) 
+                        AND imm.department_set_cd IN ( 
+                            SELECT
+                                regexp_split_to_table((SELECT company_cd_in FROM params), ',')
+                        ) 
+                )
+            ) 
+        /*END*/
             AND dm.company_cd IN ( 
                 SELECT
                     regexp_split_to_table((SELECT company_cd_in FROM params), ',')
