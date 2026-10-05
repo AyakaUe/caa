@@ -88,6 +88,12 @@ $variable.wf40_public_group.push(...$input.caa_t_request_processor.filter(item =
 })));
 if ($variable.wf40_public_group.length !== 0) {
     $variable.is_wf40_disabled = false;
+} else {
+    $variable.is_wf40_disabled = true;
+    $variable.wf40_public_group.push(...$input.wf40_public_group.map(item => ({
+        cd: item.cd,
+        name: item.name
+    })));
 }
 
 // 申請処理者トランから追加フラグ自動の決裁者一覧設定
